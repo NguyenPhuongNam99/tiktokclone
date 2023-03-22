@@ -1,3 +1,6 @@
-module.exports = function override(config, env) {
-    return config;
-}
+const { override, useBabelRc } = require("customize-cra");
+const path = require("path");
+
+module.exports = override(
+    useBabelRc()
+);
